@@ -1,6 +1,8 @@
 import React from "react";
 import star from "./images/icon-star.svg";
-import thanks from "./images/illustration-thank-you.svg";
+
+import Button from "./components/Button";
+import Thankyou from "./components/Thankyou";
 
 function App() {
   return (
@@ -14,19 +16,19 @@ function App() {
         </p>
         <ul className="grid grid-cols-5 gap-5 mb-10">
           <li>
-            <button>1</button>
+            <Button number={1}></Button>
           </li>
           <li>
-            <button>2</button>
+            <Button number={2}></Button>
           </li>
           <li>
-            <button>3</button>
+            <Button number={3}></Button>
           </li>
           <li>
-            <button>4</button>
+            <Button number={4}></Button>
           </li>
           <li>
-            <button>5</button>
+            <Button number={5}></Button>
           </li>
         </ul>
         <div className="text-center">
@@ -35,6 +37,7 @@ function App() {
           </button>
         </div>
       </div>
+      <Thankyou />
     </>
   );
 }
