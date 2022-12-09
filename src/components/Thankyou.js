@@ -1,13 +1,13 @@
 import React from "react";
 import thanks from "../images/illustration-thank-you.svg";
 
-const Thankyou = ({ setIsSubmitted }) => {
+const Thankyou = ({ setIsSubmitted, items }) => {
   return (
     <div className="wrapper">
       <img src={thanks} alt="" className="block mx-auto mb-5" />
       <div className="flex items-center justify-center">
         <p className="p-rating bg-gray-700 rounded-full text-center text-sm px-4 pt-1">
-          You selected out of 5
+          You selected {items} out of 5
         </p>
       </div>
       <h2 className="text-gray-100 text-3xl my-6 text-center">Thank you</h2>

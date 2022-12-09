@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import star from "./images/icon-star.svg";
-
 import Button from "./components/Button";
 import Thankyou from "./components/Thankyou";
 
 function App() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [items, setItems] = useState("");
   return (
     <>
       {!isSubmitted && (
@@ -18,19 +18,19 @@ function App() {
           </p>
           <ul className="grid grid-cols-5 gap-5 mb-10">
             <li>
-              <Button number={1}></Button>
+              <Button setItems={setItems} number={1}></Button>
             </li>
             <li>
-              <Button number={2}></Button>
+              <Button setItems={setItems} number={2}></Button>
             </li>
             <li>
-              <Button number={3}></Button>
+              <Button setItems={setItems} number={3}></Button>
             </li>
             <li>
-              <Button number={4}></Button>
+              <Button setItems={setItems} number={4}></Button>
             </li>
             <li>
-              <Button number={5}></Button>
+              <Button setItems={setItems} number={5}></Button>
             </li>
           </ul>
           <div className="text-center">
@@ -43,7 +43,9 @@ function App() {
           </div>
         </div>
       )}
-      {isSubmitted && <Thankyou setIsSubmitted={setIsSubmitted} />}
+      {isSubmitted && (
+        <Thankyou setIsSubmitted={setIsSubmitted} items={items} />
+      )}
     </>
   );
 }
